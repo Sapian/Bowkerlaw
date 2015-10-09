@@ -19,7 +19,7 @@
 define('DB_NAME', 'stc');
 
 /** MySQL database username */
-define('DB_USER', 'foot');
+define('DB_USER', 'pet');
 
 /** MySQL database password */
 define('DB_PASSWORD', '');
