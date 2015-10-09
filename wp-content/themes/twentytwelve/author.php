@@ -4,17 +4,7 @@
  *
  * Used to display archive-type pages for posts by an author.
  *
- * @link http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
- */
 
-get_header(); ?>
-
-	<section id="primary" class="site-content">
-		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -31,16 +21,6 @@ get_header(); ?>
 			<header class="archive-header">
 				<h1 class="archive-title"><?php printf( __( 'Author Archives: %s', 'twentytwelve' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
 			</header><!-- .archive-header -->
-
-			<?php
-				/* Since we called the_post() above, we need to
-				 * rewind the loop back to the beginning that way
-				 * we can run the loop properly, in full.
-				 */
-				rewind_posts();
-			?>
-
-			<?php twentytwelve_content_nav( 'nav-above' ); ?>
 
 			<?php
 			// If a user has filled out their description, show a bio on their entries.
